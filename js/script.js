@@ -10,7 +10,7 @@ function databind(mistakes) {
     });
 
     var TRUEmistakes = mistakes.filter(function (d){
-        return d.mistake === "TRUE" && d.freq > 1
+        return d.mistake === "TRUE" && d.freq > 1 && d.categoryBig != "апостроф"
     });
 
 
@@ -137,9 +137,9 @@ step_00();
 $("#next-btn")
     .on("mouseover", function() {
         var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-        var speed = (9250 - Math.abs(currentMargin))
-        $("#MisprintButtons").animate({
-                    'margin-left' : - 9990 + (window.innerWidth * 0.9) + "px"
+        var speed = (8100 - Math.abs(currentMargin))
+        $("#MisprintButtons").stop().animate({
+                    'margin-left' : - 8100 + (window.innerWidth * 0.9) + "px"
         }, speed);
  })
     .on("mouseout", function() {
@@ -169,7 +169,7 @@ $("#prev-btn")
 /* --- другий блок  ---*/
 $("#next-btn-ap")
     .on("mouseover", function() {
-        $("#ap_MisprintButtons").animate({
+        $("#ap_MisprintButtons").stop().animate({
             'margin-left' : - 1750 + (window.innerWidth * 0.9) + "px"
         }, 1000);
     })
@@ -203,7 +203,7 @@ $(document).on("keydown", function(e) {
                 if(keyup === false) {
                     console.log("repeated");
                     var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (9250 - Math.abs(currentMargin));
+                    var speed = (8100 - Math.abs(currentMargin));
 
                     $("#MisprintButtons").stop().animate({
                         'margin-left': 0
@@ -211,14 +211,14 @@ $(document).on("keydown", function(e) {
                 } else {
                     console.log("once");
                     var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (9250 - Math.abs(currentMargin));
+                    var speed = (8100 - Math.abs(currentMargin));
                     if(currentMargin < 0){
                         $("#MisprintButtons").stop().animate({
                             'margin-left': +currentMargin + 270 + "px"
                         }, 250);
                     } else {
                         $("#MisprintButtons").stop().animate({
-                            'margin-left': - 9990 + (window.innerWidth * 0.9) + "px"
+                            'margin-left': - 8100 + (window.innerWidth * 0.9) + "px"
                         }, 0);
                     }
 
@@ -231,16 +231,16 @@ $(document).on("keydown", function(e) {
                 if(keyup === false) {
                     console.log("repeated");
                     var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (9250 - Math.abs(currentMargin));
+                    var speed = (8100 - Math.abs(currentMargin));
 
                     $("#MisprintButtons").stop().animate({
-                        'margin-left': - 9990 + (window.innerWidth * 0.9) + "px"
+                        'margin-left': - 8100 + (window.innerWidth * 0.9) + "px"
                     }, 0);
                 } else {
                     console.log("once");
                     var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (9250 - Math.abs(currentMargin));
-                    if (currentMargin > (-9990 + (window.innerWidth * 0.9))){
+                    var speed = (8100 - Math.abs(currentMargin));
+                    if (currentMargin > (-8100 + (window.innerWidth * 0.9))){
                         $("#MisprintButtons").stop().animate({
                             'margin-left': +currentMargin - 270 + "px"
                         }, 250);
