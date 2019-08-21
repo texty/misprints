@@ -22,6 +22,17 @@ function databind(mistakes) {
     console.log(nested_data);
 
 
+    function myAbcSort(a, b){
+        if(a.values.length > b.values.length) {
+            return -1;
+        } else {
+            return 1;
+        }
+    }
+
+    nested_data.sort(myAbcSort);
+    console.log(nested_data);
+
     var container = d3.select("#MisprintButtons");
 
 
@@ -61,9 +72,9 @@ function databind(mistakes) {
             return k.case + " / " + k.freq
         });
 
-    pCont.selectAll(".misprintCases").sort(function(a,b){
-        return d3.descending(a.freq, b.freq)
-    });
+    // pCont.selectAll(".misprintCases").sort(function(a,b){
+    //     return d3.descending(a.freq, b.freq)
+    // });
 
 
 
