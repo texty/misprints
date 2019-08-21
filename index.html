@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>СКІЛЬКИ ЗАРОБЛЯТЬ В ДЕРЖСЕКТОРІ. 170 ПРОФЕСІЙ</title>
+
+<!-- OpenGraph Meta Tags -->
+<meta property="og:site_name"
+      content="СКІЛЬКИ ЗАРОБЛЯТЬ В ДЕРЖСЕКТОРІ. 170 ПРОФЕСІЙ."/>
+<meta property="og:type" content="http://texty.org.ua/d/2019/salaries/"/>
+<meta property="og:title"
+      content="СКІЛЬКИ ЗАРОБЛЯТЬ В ДЕРЖСЕКТОРІ. 170 ПРОФЕСІЙ."/>
+<meta property="og:image" content="http://texty.org.ua/d/2019/salaries/img/cover.png"/>
+<meta property="og:description"
+      content="Ми проаналізували декларації за 2018 рік, виокремили найбільш розповсюджені професії та подивились на розподіл зарплат."/>
+<meta property="og:url" content="http://texty.org.ua/d/2019/salaries/"/>
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:site" content="@textyorgua"/>
+<meta property="twitter:account_id" content="49572937"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content=http://texty.org.ua/d/2019/salaries/"/>
+<meta name="twitter:title"
+      content="СКІЛЬКИ ЗАРОБЛЯТЬ В ДЕРЖСЕКТОРІ. 170 ПРОФЕСІЙ."/>
+<meta name="twitter:description"
+      content="Ми проаналізували декларації за 2018 рік, виокремили найбільш розповсюджені професії та подивились на розподіл зарплат."/>
+<meta name="twitter:image:src" content="http://texty.org.ua/d/2019/salaries/img/cover.png"/>
+<meta name="twitter:image:width" content="1200"/>
+<meta name="twitter:image:height" content="630"/>
+
+
+<!-- Other Meta Tags -->
+<meta name="title"
+      content="СКІЛЬКИ ЗАРОБЛЯТЬ В ДЕРЖСЕКТОРІ. 170 ПРОФЕСІЙ.">
+<meta name="description"
+      content="Ми проаналізували декларації за 2018 рік, виокремили найбільш розповсюджені професії та подивились на розподіл зарплат.">
+
+
+<!-- Links -->
+<link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|PT+Mono|Play|Podkova&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+   .draggedPath {
+        fill: none;
+        stroke: red;
+        stroke-width: 2px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+    }
+
+</style>
+<!-- Scripts -->
+<body>
+<main>
+<div class="textContent">
+    <h1 id="text"></h1>
+
+    <p>В червні на Текстах вийшла стаття про зарплати, на основі даних понад мільйона декларацій. Однак декларація може розповісти не тільки про те, скільки людина заробляє, але й чи вміє вона написати назву своєї професії без помилки</p>
+
+    <p>І хоча помилок в деклараціяї не настільки багато, аби бити в колокол, та чимала неправильно зазначених назв скоріше одруківки, деякі з них, безумовно, цікаві. Дивіться самі:</p>
+
+    <p><span class="misprint">б<span class="strike">лу</span>хгалтер</span> — постійно бігає десь у справах або без справ</p>
+    <p><span class="misprint">бу<span class="strike">ха</span>лтер</span> — якщо хочеться якось скоротити це довге слово, краще вже викинути "х", ніж "г"</p>
+    <p><span class="misprint">депут<span class="strike">у</span>т</span> — завжди в центрі уваги</p>
+    <p><span class="misprint">депута<span class="strike">м</span></span> — хто-зна де</p>
+    <p><span class="misprint">депу<span class="strike">п</span>ат</span> — знову депутат, самі дивуємось варіативності одруківок в цьому слові</p>
+    <p><span class="misprint">д<span class="strike">у</span>путат</span> — протирає штані на засіданнях</p>
+    <p><span class="misprint">де<span class="strike">р</span>утат</span> — не прогавить можливість заробити</p>
+    <p><span class="misprint">де<span class="strike">туп</span>ат</span> — не прогавить можливості прогавити можливіcть</p>
+    <p><span class="misprint">дирек<span class="strike">от</span>ра</span> — якщо директорки змінюються занадто часто</p>
+    <p><span class="misprint">ди<span class="strike">т</span>ектор</span> — коли начальник бачить підлеглих наскрізь</p>
+    <p><span class="misprint">викладач-м<span class="strike">и</span>тодист</span> — не працює задарма або, як варіант, викладає митну справу</p>
+    <p><span class="misprint">вч<span class="strike">і</span>тель</span> — випадкова в професії людина</p>
+    <p><span class="misprint">ст<span class="strike">ра</span>ший</span> — дуже шанований колегами</p>
+    <p><span class="misprint">спіц<span class="strike">а</span>ліст</span> — фахівець із вʼязання спицями</p>
+    <p><span class="misprint">фа<span class="strike">к</span>івець</span> — вкрай необхідний спеціаліст для факінг-отраслі</p>
+    <p><span class="misprint"><span class="strike">в</span>ахівець</span> — фахівець найвищого рівня</p>
+    <p><span class="misprint">інспектор<span class="strike">т</span></span> — дорого, але солодко</p>
+    <p><span class="misprint">інс<span class="strike">т</span>пектор</span> — перевіряє instagram</p>
+    <p><span class="misprint">спеціаліст із закупіве<span class="strike">н</span>ь</span> — встигає розмістити всі тендери до 8 ранку</p>
+    <p><span class="misprint">о<span class="strike">гр</span>ани</span> — це такі органи, де працюють огри (в кельтській міфології — потворні злі велетні-людожери, як відомий усім Шрек з одноіменного мультфільма)</p>
+    <p><span class="misprint">майст<span class="strike">а</span>р</span> — зірка цеху</p>
+    <p><span class="misprint"><span class="strike">шикалат</span></span> — жартуємо) такого в деклараціяї не було, але ми точно знаємо, що деяки люди пишуть це слово саме так.</p>
+
+    <p>Цікаво, що найбільше системних помилок допускають в назві професії "спеціаліст". Ми знайшли прийнамйні 5 альтернативних способів написання цього слова: спецеаліст, спеціліст, специаліст, спецаліст, спеціалист.</p>
+
+    <p>Цікаві варіанти написання таких професій як "бригадир" та "диспетчер", а ось в назвах "офіцер", "інспектор", "секретар", "механік" та інші - найрозповсюдженою помилкою є російський варіант написання цих слів. Розповсюдженною помилкою є кількість "н" в суфіксах. Якщо сумніваєтесь, одна чи дві, краще писати три. Хай краще думають, що у вас залипла кнопка на клавіатурі, ніж що ви погано вчились у школі. </p>
+
+    <p> Наведіть мишею на стрілки, щоб гортати вліо/вправо. Ми залишили всі варіанти помилок та одруківок, що зустрічались більше 1 разу.</p>
+
+    </div>
+
+    <div class="sliderContainer">
+        <div class="prev-next-btns">
+            <div id="prev-btn" data-tippy="Гортайте слайдер"><img style="width:100%; transform: rotate(180deg);" src="img/arrow.png"/></div>
+            <div id="next-btn" data-tippy-content="Гортайте слайдер"><img style="width:100%" src="img/arrow.png"/></div>
+        </div>
+    <div class="misprintWrapper">
+        <div id="MisprintButtons"></div>
+    </div>
+    </div>
+
+    <div class="textContent">
+    <h1>З апострфоом треба щось рєшать</h1>
+    <p>Що там не кажи, а апостроф на клавіатурі розташований не зручно. Судячи з того, скільки разів декларанти писали "сімя" замість "cімʼя" і "звязку" замість "зв'язку" знайти апостроф багато кому так і не вдалось. Десь у кутку, перед цифрою "1", разом зі знаком гривні, приблизно дорівнює та російською "Ё". І це за умови якщо у вас нова клавіатура, на старих знайти апостроф може бути ще важче.</p>
+     <p>За необхідності апострф можна замінити на зірочку, подвійні лапки, мʼякий знак або просто пропустити. Дивіться, до яких прийомів найчастіше вдалавлись декларанти.</p>
+   </div>
+
+        <div class="sliderContainer">
+            <div class="prev-next-btns">
+                <div id="prev-btn-ap" data-tippy="Гортайте слайдер"><img style="width:100%; transform: rotate(180deg);" src="img/arrow.png"/></div>
+                <div id="next-btn-ap" data-tippy-content="Гортайте слайдер"><img style="width:100%" src="img/arrow.png"/></div>
+            </div>
+            <div class="misprintWrapper">
+                <div id="ap_MisprintButtons"></div>
+            </div>
+        </div>
+
+
+
+    <div class="textContent">
+        <h1 title="">ДСЗА</h1>
+        <p></p>
+    <p>А ще <b>д</b>екларанти <b>с</b>ильно <b>з</b>ловживають <b>а</b>бревіатурами (ДСЗА). Ні, більшість людей, не знає, що таке <b>СДРІ</b> (старший державний ревізор інспектор), <b>ДПРЧ</b> (державна пожежно-рятувальна частина), <b>УФЗБО</b> (управління фінансового забезпечення та бухгалтерського обліку) тощо.</p>
+    <p>Деякі з них настільки звикли до профабревіатур, що навіть не бачать під ними інших цілком реальних слів. Як наприклад, оці шановні люди:</p>
+    <p><span class="misprint">ст. інспектор с од <span class="strike">ВОР</span> оу гу дфс у м. києві</span></p>
+    <p><span class="misprint">провідний  <span class="strike">фахівець ВОР</span>та гп урнс гу дснс в одеській області
+</span></p>
+    <p><span class="misprint">головний оперуповноважений <span class="strike">інспектор ВОР</span> уор двб нпу
+
+</span></p>
+    <p><span class="misprint">провідний <span class="strike">фахівець ВОР</span> та гп ур на нс
+</span></p>
+    <p><span class="misprint"><span class="strike">інспектор ВОР</span> уоазор</span>
+    </p>
+
+
+    <h1>Відчути себе багатієм</h1>
+    <p>Ренат Ахметов може втратити свій статус найбагатшого українця. У 2018 рік звичайни <a href="https://public.nazk.gov.ua/declaration/8e1b468d-da75-40eb-9b0a-9e5681c6f29a">львівський інженер задекдарував майже 100 млрд грн доходу, джерелом яких стала заробітна плата в держсекторі.</p>
+    <img style="width:90%; margin:auto;" src="img/richest.png"/>
+
+    <p>На другому місці водій з Полтавщини.</p>
+    <img style="width:90%; margin:auto;" src="img/second_the_richest.png"/>
+
+        <!-- Уточнююча Моряка -->
+        <!--https://public.nazk.gov.ua/declaration/68d537e2-4f78-468b-9221-d1d4dfd2ec45-->
+        <!--https://public.nazk.gov.ua/declaration/ca63bd21-1d5f-4e60-b017-8f5fe4240aaa-->
+        <!--Пиріг Дмитро Олександрович-->
+        <!--Моряк Ігор Йосифович-->
+        <p>Щоправда, обидва пізніше подали <a href="https://public.nazk.gov.ua/declaration/286e4f26-00fb-43fa-97cb-047453700e92">уточнюючі</a> декларації, але як приємно хоча б на три відчути себе міліардером</p>
+
+    <h1>Кухаря-рятувальника викликали?</h1>
+    <p>А ще ми нашли в декраціях професію "кухаря-рятувальника". Уява відразу намалювала людину, яка несе смачний корисний обід до офісу, щоб ти вчасно поїв, навіть якщо на дворі сніжний занос, пробка, гроза чи тиждень до зарплати. Також кухарі-рятувальники можуть допомогти, коли немає часу або бажання готувати, або коли гості сказали, що будуть за годинку, або ж коли ви намагались приготувати фаршировану щуку, але щось пішло не так.
+
+<p>Не треба недооцюнювати те, чим ви займаєтесь. </p>
+
+ <p>А ще не треба сприймайти нашу гумор-колонку близько до серця. Із 311 тис. відібраних слів трохи більше за 7 тис. були написані з помилками, що складає 2.35%. Помилки ми знаходили за допомогою бібліотеки hunspell (точність визначення помилково написаного слова склала понад 95%). Більшість із знайдених нами помилок не є системними, хоча й без них, звісно, не обходиться. </p>
+
+    <p>Просто, якщо колись вам доведеться заповнювати декларацію, будьте уважніші. </p>
+    </div>
+
+
+<div id="logo-soc">
+    <div class="logo">
+        <a href="http://texty.org.ua/" target="_blank"><img class='top-logo' style="width:100%" src="img/logo.png"/></a>
+        <!--<a href="http://texty.org.ua/" target="_blank"><img class='partner-logo' style="width:100%" src=""/></a>-->
+    </div>
+
+    <div id="soc">
+        <!--<div id="translate"><a href="http://texty.org.ua/d/2019/numbers/en"> <span>English</span> </a></div>-->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/salaries/" target="_blank" class="share-btn"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/salaries/" target="_blank" class="share-btn"><i class="fab fa-twitter-square"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+</main>
+
+
+<!--<p>Цікаво, що депутати місцевого самоврядування - чи не найбідніші люди, якщо брати до увагу офіційну зарплату за основним місцем роботи. Середня зарплата депутата дорівнює мінімальній по країні</p>-->
+
+
+
+
+<!-- Donate button -->
+    <div id="button">
+        <h3>TEXTY.ORG.UA незалежне видання без навʼязливої реклами і замовних матеріалів. Щоб працювати і далі нам потрібна ваша підтримка.</h3>
+        <!--<h3>TEXTY.ORG.UA is an independent media without annoying advertisement and pre-paid materials. To keep working we need your support.</h3>-->
+
+        <div id="button-container">
+            <button onclick="location.href='https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTc2NjUwNTYyODI3IiwiYW1vdW50IjoiNTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J%2FQvtC20LXRgNGC0LLQsCIsInR5cGUiOiJkb25hdGUiLCJsYW5ndWFnZSI6InVrIn0%3D&signature=YFkd4Z74QCJXRxMTPoWm0JVlkX4%3D'" id="support-us">ПОЖЕРТВУВАТИ</button>
+            <!--<button onclick="location.href='https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTc2NjUwNTYyODI3IiwiYW1vdW50IjoiNTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J%2FQvtC20LXRgNGC0LLQsCIsInR5cGUiOiJkb25hdGUiLCJsYW5ndWFnZSI6InVrIn0%3D&signature=YFkd4Z74QCJXRxMTPoWm0JVlkX4%3D'" id="support-us">DONATE</button>-->
+
+        </div>
+    </div>
+
+
+
+<!-- Read-more links -->
+<section class="read-more">
+    <h3><b>Читайте також:</b></h3>
+    <!--<h3><b>Read also:</b></h3>-->
+    <div id="read-more-items">
+        <a target="_blank" href=""><img src="img/read-more-1.png" alt="База авто"></a>
+        <a target="_blank" href=""><img src="img/read-more-2.png" alt="Парковки"></a>
+        <a target="_blank" href=""><img src="img/read-more-3.png" alt="Небезпечно для життя"></a>
+    </div>
+</section>
+
+
+ <!--Created by TEXTY-->
+<!--<section id="created_texty">-->
+    <!--<div>-->
+        <!--<a href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/.../" class="share-btn"><i class="fab fa-facebook-f"></a>-->
+        <!--<a href="https://twitter.com/intent/tweet?text=http://texty.org.ua/.../" class="share-btn"><i class="fab fa-twitter"></a>-->
+        <!--&lt;!&ndash;<h3>Створено Текстами</h3>&ndash;&gt;-->
+        <!--<h3>Created by TEXTY</h3>-->
+    <!--</div>-->
+    <!--<div>-->
+        <!--<a href="http://texty.org.ua/" target="_blank"><img src="img/logo.png" alt="texty.org.ua"></a>-->
+    <!--</div>-->
+<!--</section>-->
+
+
+
+<!-- Ordinary footer-->
+<section class="footer">
+    <ul class="links0">
+        <li id="big">&copy; 2019, Тексти.org.ua <br/>Медія для розумних</li>
+    </ul>
+
+    <ul class="links1">
+        <li><a href="http://texty.org.ua/mod/article/index.php?ed=1">Вибір редакції</a>
+            <a href="http://texty.org.ua/mod/article/?view=rss&amp;ed=1">(RSS)</a>
+        </li>
+        <li><a href="http://texty.org.ua/mod/video/">Відео</a>
+            <a href="http://texty.org.ua/mod/video/?view=rss">(RSS)</a>
+        </li>
+        <li><a href="http://texty.org.ua/mod/article/">Статті</a>
+            <a href="http://texty.org.ua/mod/article/?view=rss">(RSS)</a>
+        </li>
+        <li><a href="http://texty.org.ua/mod/news/">Новини</a>
+            <a href="http://texty.org.ua/mod/news/?view=rss">(RSS)</a>
+        </li>
+        <li><a href="http://texty.org.ua/mod/blog/everyone.php">Блоги</a>
+            <a href="http://texty.org.ua/mod/blog/blog_list.php?view=rss">(RSS)</a>
+        </li>
+    </ul>
+
+    <ul class="links2">
+        <li><a href="http://texty.org.ua/mod/archive/tag.php?tag=%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D1%96%D1%8F">Концепції</a></li>
+        <li><a href="http://texty.org.ua/mod/archive/tag.php?tag=%D1%80%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B8">Реформи</a></li>
+        <li><a href="http://texty.org.ua/mod/archive/tag.php?tag=%D0%B4%D0%BE%D1%81%D0%B2%D1%96%D0%B4">Важливий досвід</a></li>
+        <li><a href="http://texty.org.ua/mod/archive/tag.php?tag=%D1%96%D0%BD%D0%BE%D0%B7%D0%BC%D1%96">Найцікавіше з інозмі</a></li>
+        <li><a href="http://texty.org.ua/pg/blog/infoviz">Журналістика даних</a></li>
+    </ul>
+
+    <ul class="links3">
+        <li><a id="orange" href="http://texty.org.ua/mod/pages/donate.php" class="support-site">Підтримай сайт фінансово!</a></li>
+        <li><a href="http://facebook.com/texty.org.ua">Ми у Фейсбуці</a></li>
+        <li><a href="http://twitter.com/textyorgua">Ми у Твітері</a></li>
+        <li><a href="http://texty.org.ua/pg/pages/view/22">Про нас</a></li>
+        <li><a href="http://texty.org.ua/mod/archive/">Архів</a></li>
+    </ul>
+
+    <div class="copying-info">
+        Матеріали ТЕКСТИ.org.ua можна поширювати згідно з ліцензією Creative Commons з обов’язковим
+        посиланням. Велике прохання ставити гіперпосилання в першому чи другому абзаці вашого матеріалу.
+    </div>
+</section>
+
+
+<script src="lib/jquery-2.1.4.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+<!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+<!--<script src="lib/scrollama.min.js"></script>-->
+<!--<script src="lib/swoopy-drag.js"></script>-->
+<script src="lib/share-behavior.js"></script>
+<script src="lib/shuffletext.jquery.min.js"></script>
+<script src="js/script.js"></script>
+<!--<script src="js/misprints.js"></script>-->
+
+<script>
+
+</script>
+
+<script>
+    //Зміна кольору social icons color change on scroll
+    var headerHeight = $("#header").css("height");
+    headerHeight = headerHeight.replace("px", '');
+    $(function() {
+        var getWindow = jQuery(window);
+        var windowHeight = getWindow.height();
+        $(window).scroll(function(){
+            if($(window).scrollTop() > headerHeight ){
+                $(".fab.fa-facebook-square").css("color", "#d84556");
+                $(".fab.fa-twitter-square").css("color", "#d84556");
+            } else {
+                $(".fab.fa-facebook-square").css("color", "white");
+                $(".fab.fa-twitter-square").css("color", "white");
+            }
+        });
+    });
+
+//    show metodology
+    $("#show-methodology").on("click", function() {
+        $(".methodology").toggleClass("hidden", "visible")
+    })
+
+
+
+
+//
+//    d3.csv("data/agrep_mistakes_result.csv", function(mistakes) {
+//      var interesting = mistakes.filter(function(d) {
+//            return d.interesting === "yes"
+//        });
+//
+//        var textArray = [];
+//
+//        interesting.forEach(function(d){
+//            textArray.push(d.case)
+//        });
+//        console.log(textArray);
+//        $('#text').ShuffleText(
+//            textArray
+//        , {loop: true, shuffleSpeed: 10});
+//
+//    });
+
+
+</script>
+
+<script type="text/javascript">
+
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18136548-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>

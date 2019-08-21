@@ -1,0 +1,168 @@
+@import "variables";
+@import "donate";
+@import "header";
+@import "footer";
+
+
+//$mainColor: #432E3E;
+$mainColor: #3D728E;
+
+
+
+
+body {
+  margin:0;
+  padding:0;
+  color:#484D60;
+  line-height: 1.6;
+  font-size:18px;
+  font-family: Roboto, sans-serif;
+}
+
+main {
+
+}
+
+
+
+/* -------------------------------------------------------------- */
+.sliderContainer {
+  position:relative;
+}
+
+.misprintWrapper {
+  width:90vw;
+  margin:auto;
+  overflow: hidden;
+  position:relative;
+}
+
+#prev-btn, #next-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: calc(50vh - 25px);
+}
+
+#prev-btn-ap, #next-btn-ap {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: calc(50% - 25px);
+
+}
+
+#prev-btn:hover, #next-btn:hover, #prev-btn-ap:hover, #next-btn-ap:hover {
+  cursor: pointer;
+}
+
+#prev-btn, #prev-btn-ap {
+  left: 10px;
+}
+
+#next-btn, #next-btn-ap {
+  right: 10px;
+}
+
+
+.content.hideElem {
+  pointer-events: none;
+}
+
+
+#MisprintButtons {
+  width:90%;
+  margin:0 5%;
+  display:grid;
+  grid-template-columns: repeat(37, 250px);
+  grid-gap: 20px;
+  //overflow-x: hidden;
+  //overflow-y: auto;
+
+}
+
+div.column {
+  border-right: 1px solid lightgrey;
+}
+
+#ap_MisprintButtons {
+  width:90%;
+  margin:0 5%;
+  display:grid;
+  grid-template-columns: repeat(7, 250px);
+  grid-gap: 20px;
+}
+
+
+.textContent {
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+}
+
+
+
+  #text {
+    text-transform: uppercase;
+    //font-size:25px;
+    font-weight: bold;
+    //letter-spacing: 5px;
+    color: #5893FC;
+  }
+
+
+  .misprint {
+    padding:2px;
+    //font-family: 'Caveat', cursive;
+    font-family: 'Bad Script', cursive;
+    font-weight:bold;
+    font-size:25px;
+  }
+
+  .collapsible {
+    font-family: 'Bad Script', cursive;
+    font-weight:bold;
+    font-size:25px;
+    color: green;
+    margin-bottom:5px;
+    //background-color: #5893FC;
+    cursor: pointer;
+    padding: 10px;
+    width: auto;
+    border: none;
+    text-align: left;
+    outline: none;
+  }
+
+
+.hideElem {
+  //display:none;
+}
+
+.misprintCases {
+  margin:0;
+  font-family: 'Bad Script', cursive;
+  font-weight:bold;
+  font-size:25px;
+}
+
+
+  .strike {
+    position: relative;
+    display: inline-block;
+  }
+  .strike::before {
+    content: '';
+    border-bottom: 3px solid red;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 80%;
+  }
+
+.withpadding {
+  padding: 0 0.15em;
+}
+
