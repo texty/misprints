@@ -292,7 +292,7 @@ body {
   font-size: 18px;
   font-family: Roboto, sans-serif; }
 
-/* -------------------------------------------------------------- */
+/* ---------------------------- */
 .sliderContainer {
   position: relative; }
 
@@ -351,9 +351,7 @@ div.column {
   font-size: 20px; }
 
 #text {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #5893FC; }
+  font-weight: bold; }
 
 .misprint {
   padding: 2px;
