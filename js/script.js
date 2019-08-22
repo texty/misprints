@@ -51,7 +51,7 @@ function databind(mistakes) {
 
     var pCont = oneMisprint
         .append("div")
-        .attr("class", "content hideElem");
+        .attr("class", "content");
 
     var pcontent = pCont.selectAll("p")
         .data(function(d) {
@@ -107,7 +107,7 @@ function databind(mistakes) {
 
     var ap_pCont = ap_oneMisprint
         .append("div")
-        .attr("class", "content hideElem");
+        .attr("class", "content");
 
     var ap_pcontent = ap_pCont.selectAll("p")
         .data(function(d) {
@@ -141,71 +141,71 @@ function step_00() {
 step_00();
 
 
-/* --- перший блок ---*/
-$("#next-btn")
-    .on("mouseover", function() {
-        var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-        var speed = (8100 - Math.abs(currentMargin))
-        $("#MisprintButtons").stop().animate({
-                    'margin-left' : - 8100 + (window.innerWidth * 0.9) + "px"
-        }, speed);
- })
-    .on("mouseout", function() {
-        var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-        $("#MisprintButtons").stop().animate({
-            'margin-left' : currentMargin
-        }, Math.abs(currentMargin));
-    });
+    /* --- перший блок ---*/
+    $("#next-btn")
+        .on("mouseover", function() {
+            var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
+            var speed = (8100 - Math.abs(currentMargin))
+            $("#MisprintButtons").stop().animate({
+                'margin-left' : - 8100 + (window.innerWidth * 0.9) + "px"
+            }, speed);
+        })
+        .on("mouseout", function() {
+            var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
+            $("#MisprintButtons").stop().animate({
+                'margin-left' : currentMargin
+            }, Math.abs(currentMargin));
+        });
 
 
 
-$("#prev-btn")
-    .on("mouseover", function() {
-    $("#MisprintButtons").stop().animate({
-        'margin-left' : 0
-    }, 5000);
-})
-    .on("mouseout", function() {
-        var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-        $("#MisprintButtons").stop().animate({
-            'margin-left' : currentMargin
-        }, Math.abs(currentMargin));
-    });
+    $("#prev-btn")
+        .on("mouseover", function() {
+            $("#MisprintButtons").stop().animate({
+                'margin-left' : 0
+            }, 5000);
+        })
+        .on("mouseout", function() {
+            var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
+            $("#MisprintButtons").stop().animate({
+                'margin-left' : currentMargin
+            }, Math.abs(currentMargin));
+        });
 
 
 
-/* --- другий блок  ---*/
-$("#next-btn-ap")
-    .on("mouseover", function() {
-        $("#ap_MisprintButtons").stop().animate({
-            'margin-left' : - 1750 + (window.innerWidth * 0.9) + "px"
-        }, 1000);
-    })
-    .on("mouseout", function() {
-        var currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
-        $("#ap_MisprintButtons").stop().animate({
-            'margin-left' : currentMargin
-        }, Math.abs(currentMargin));
-    });
+    /* --- другий блок  ---*/
+    $("#next-btn-ap")
+        .on("mouseover", function() {
+            $("#ap_MisprintButtons").stop().animate({
+                'margin-left' : - 1750 + (window.innerWidth * 0.9) + "px"
+            }, 1000);
+        })
+        .on("mouseout", function() {
+            var currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
+            $("#ap_MisprintButtons").stop().animate({
+                'margin-left' : currentMargin
+            }, Math.abs(currentMargin));
+        });
 
 
-$("#prev-btn-ap")
-    .on("mouseover", function() {
-        $("#ap_MisprintButtons").stop().animate({
-            'margin-left' : 0
-        }, 1000);
-    })
-    .on("mouseout", function() {
-        var currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
-        $("#ap_MisprintButtons").stop().animate({
-            'margin-left' : currentMargin
-        }, Math.abs(currentMargin));
-    });
+    $("#prev-btn-ap")
+        .on("mouseover", function() {
+            $("#ap_MisprintButtons").stop().animate({
+                'margin-left' : 0
+            }, 1000);
+        })
+        .on("mouseout", function() {
+            var currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
+            $("#ap_MisprintButtons").stop().animate({
+                'margin-left' : currentMargin
+            }, Math.abs(currentMargin));
+        });
 
 
-var keyup = true;
-/* по кнопках клавіатури */
-$(document).on("keydown", function(e) {
+    var keyup = true;
+    /* по кнопках клавіатури */
+    $(document).on("keydown", function(e) {
         switch (e.which) {
             case 37:
                 if(keyup === false) {
@@ -265,16 +265,21 @@ $(document).on("keydown", function(e) {
                 break;
 
             default:
-            return; // exit this handler for other keys
+                return; // exit this handler for other keys
         }
-    keyup = false;
-    // e.preventDefault(); // prevent the default action (scroll / move caret)
-});
+        keyup = false;
+        // e.preventDefault(); // prevent the default action (scroll / move caret)
+    });
 
-$(document).keyup(function(e) {
-    console.log("keyup");
-    keyup = true
-})
+    $(document).keyup(function(e) {
+        console.log("keyup");
+        keyup = true
+    });
+
+
+
+
+
 
 
 

@@ -292,6 +292,18 @@ body {
   font-size: 18px;
   font-family: Roboto, sans-serif; }
 
+.desk {
+  display: block; }
+  @media (max-width: 500px) and (orientation: portrait) {
+    .desk {
+      display: none; } }
+
+.mob {
+  display: none; }
+  @media (max-width: 500px) and (orientation: portrait) {
+    .mob {
+      display: block; } }
+
 /* ---------------------------- */
 .sliderContainer {
   position: relative; }
@@ -343,6 +355,9 @@ div.column {
     div.column {
       margin-left: 10px; } }
 
+div.column-mob {
+  margin-left: 10%; }
+
 #ap_MisprintButtons {
   width: 90%;
   margin: 0 5%;
@@ -374,11 +389,14 @@ div.column {
   color: green;
   margin-bottom: 5px;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 0;
   width: auto;
   border: none;
   text-align: left;
   outline: none; }
+
+.hideElem {
+  display: none; }
 
 .misprintCases {
   margin: 0;
