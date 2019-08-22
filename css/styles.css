@@ -297,8 +297,8 @@ body {
   position: relative; }
 
 .misprintWrapper {
-  width: 90vw;
-  margin: auto;
+  width: calc(100vw - 120px);
+  margin: 0 auto 100px auto;
   overflow: hidden;
   position: relative; }
 
@@ -311,7 +311,7 @@ body {
 
 #prev-btn-ap, #next-btn-ap {
   position: absolute;
-  width: 50px;
+  width: 40px;
   height: 50px;
   border-radius: 50%;
   top: calc(50% - 25px); }
@@ -320,10 +320,10 @@ body {
   cursor: pointer; }
 
 #prev-btn, #prev-btn-ap {
-  left: 10px; }
+  left: 5px; }
 
 #next-btn, #next-btn-ap {
-  right: 10px; }
+  right: 5px; }
 
 .content.hideElem {
   pointer-events: none; }
@@ -336,7 +336,12 @@ body {
   grid-gap: 20px; }
 
 div.column {
-  border-right: 1px solid lightgrey; }
+  border-right: 1px solid lightgrey;
+  height: 80vh;
+  overflow-y: auto; }
+  @media (max-width: 500px) {
+    div.column {
+      margin-left: 10px; } }
 
 #ap_MisprintButtons {
   width: 90%;
@@ -349,6 +354,9 @@ div.column {
   width: 50%;
   margin: auto;
   font-size: 20px; }
+  @media (max-width: 500px) {
+    .textContent {
+      width: 90%; } }
 
 #text {
   font-weight: bold; }
