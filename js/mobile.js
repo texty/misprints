@@ -1,13 +1,10 @@
-/**
- * Created by yevheniia on 05.06.19.
- */
-
 d3.csv("data/agrep_mistakes_result_copy.csv", function(mistakes) {
 
     mistakes.forEach(function(d) {
         return d.freq = + d.freq
     });
 
+    /*--- first container ---*/
     var TRUEmistakes = mistakes.filter(function (d){
         return d.mistake === "TRUE" && d.categoryBig != "апостроф"
     });
@@ -17,7 +14,9 @@ d3.csv("data/agrep_mistakes_result_copy.csv", function(mistakes) {
         .sortValues(d3.descending)
         .entries(TRUEmistakes);
 
+
     var container = d3.select("#examplesContainer1");
+
 
     var oneMisprint = container.selectAll("div")
         .data(nested_data)
@@ -55,15 +54,13 @@ d3.csv("data/agrep_mistakes_result_copy.csv", function(mistakes) {
                 return k.case + " / " + k.freq
            });
 
-
-
     pCont.selectAll(".misprintCases").sort(function(a,b){
          return d3.descending(a.freq, b.freq)
     });
 
 
 
-    /*----------------------------------------*/
+    /*--- second container ---*/
     var ap_TRUEmistakes = mistakes.filter(function (d){
         return d.mistake === "TRUE" && d.categoryBig === "апостроф"
     });
@@ -81,7 +78,6 @@ d3.csv("data/agrep_mistakes_result_copy.csv", function(mistakes) {
         .enter()
         .append("div")
         .attr("class", "column-mob");
-
 
     ap_oneMisprint.append("p")
         .attr("class", "collapsible")
@@ -107,11 +103,9 @@ d3.csv("data/agrep_mistakes_result_copy.csv", function(mistakes) {
     ap_pcontent
         .attr("class", "misprintCases")
         .style("position", "relative")
-        .text(function(k){
+        .html(function(k){
             return k.case + " / " + k.freq
         });
-
-
 
     ap_pCont.selectAll(".misprintCases").sort(function(a,b){
         return d3.descending(a.freq, b.freq)

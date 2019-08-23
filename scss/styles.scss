@@ -15,6 +15,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+
 .desk {
   display:block;
   @media(max-width:500px) and (orientation:portrait){
@@ -29,96 +30,129 @@ body {
   }
 }
 
+/*  ---- header ----- */
 
-/* ---------------------------- */
-.sliderContainer {
-  position:relative;
-}
-
-.misprintWrapper {
-  width:calc(100vw - 120px);
-  margin:0 auto 100px auto;
-  overflow: hidden;
-  position:relative;
-
-}
-
-#prev-btn, #next-btn {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  top: calc(50vh - 25px);
-}
-
-#prev-btn-ap, #next-btn-ap {
-  position: absolute;
-  width: 40px;
-  height: 50px;
-  border-radius: 50%;
-  top: calc(50% - 25px);
-
-}
-
-#prev-btn:hover, #next-btn:hover, #prev-btn-ap:hover, #next-btn-ap:hover {
-  cursor: pointer;
-}
-
-#prev-btn, #prev-btn-ap {
-  left: 5px;
-}
-
-#next-btn, #next-btn-ap {
-  right: 5px;
-}
-
-
-.content.hideElem {
-  pointer-events: none;
-}
-
-
-#MisprintButtons {
-  width:90%;
-  margin:0 5%;
+header {
+  background-color: black;
   display:grid;
-  grid-template-columns: repeat(37, 250px);
-  grid-gap: 20px;
-  //overflow-x: hidden;
-  //overflow-y: auto;
+  grid-template-columns: 45% 40% auto;
+  margin-bottom: 100px;
+  @media(max-width:500px) and (orientation:portrait){
+    margin-bottom: 30px;
+  }
 
-}
+  img {
+    width:100%;
+    grid-column: 1/-1;
+    grid-row:1/2;
+    opacity:0.5;
+    @media(max-width:500px) and (orientation:portrait){
+      opacity:1;
+    }
+  }
 
-div.column {
-  border-right: 1px solid lightgrey;
-  height:80vh;
-  overflow-y: auto;
-  @media(max-width:500px){
-    margin-left:10px;
+  #title {
+    color:white;
+    margin: auto 100px auto auto;
+    font-size:40pt;
+    z-index: 1000000;
+    grid-column: 2/3;
+    grid-row:1/2;
   }
 }
 
-div.column-mob {
-  margin-left:10%;
-}
 
-#ap_MisprintButtons {
-  width:90%;
-  margin:0 5%;
-  display:grid;
-  grid-template-columns: repeat(7, 250px);
-  grid-gap: 20px;
-}
+/* ---------- main ------------------ */
+  .sliderContainer {
+    position:relative;
+  }
+
+  .misprintWrapper {
+    width:calc(100vw - 120px);
+    margin:0 auto 100px auto;
+    overflow: hidden;
+    position:relative;
+  }
+
+  #prev-btn,
+  #next-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: calc(50vh - 25px);
+  }
+
+  #prev-btn-ap,
+  #next-btn-ap {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+  }
+
+  #prev-btn:hover,
+  #next-btn:hover,
+  #prev-btn-ap:hover,
+  #next-btn-ap:hover {
+    cursor: pointer;
+  }
+
+  #prev-btn,
+  #prev-btn-ap {
+    left: 5px;
+  }
+
+  #next-btn,
+  #next-btn-ap {
+    right: 5px;
+  }
 
 
-.textContent {
-  width: 50%;
-  margin: auto;
-  font-size: 20px;
-  @media(max-width:500px){
+  .content.hideElem {
+    pointer-events: none;
+  }
+
+
+  #MisprintButtons {
     width:90%;
+    margin:0 5%;
+    display:grid;
+    grid-template-columns: repeat(37, 250px);
+    grid-gap: 20px;
   }
-}
+
+  div.column {
+    border-right: 1px solid lightgrey;
+    height:80vh;
+    overflow-y: auto;
+    @media(max-width:500px){
+      margin-left:10px;
+    }
+  }
+
+  div.column-mob {
+    margin-left:10%;
+  }
+
+  #ap_MisprintButtons {
+    width:90%;
+    margin:0 5%;
+    display:grid;
+    grid-template-columns: repeat(7, 250px);
+    grid-gap: 20px;
+  }
+
+
+  .textContent {
+    width: 45%;
+    margin: auto;
+    font-size: 20px;
+    @media(max-width:500px){
+      width:90%;
+    }
+  }
 
   #text {
     font-weight: bold;
@@ -138,7 +172,6 @@ div.column-mob {
     font-size:25px;
     color: green;
     margin-bottom:5px;
-    //background-color: #5893FC;
     cursor: pointer;
     padding: 10px 0;
     width: auto;
@@ -148,22 +181,22 @@ div.column-mob {
   }
 
 
-.hideElem {
-  display:none;
-}
+  .hideElem {
+    display:none;
+  }
 
-.misprintCases {
-  margin:0;
-  font-family: 'Bad Script', cursive;
-  font-weight:bold;
-  font-size:25px;
-}
-
+  .misprintCases {
+    margin:0;
+    font-family: 'Bad Script', cursive;
+    font-weight:bold;
+    font-size:25px;
+  }
 
   .strike {
     position: relative;
     display: inline-block;
   }
+
   .strike::before {
     content: '';
     border-bottom: 3px solid red;
@@ -173,7 +206,7 @@ div.column-mob {
     top: 80%;
   }
 
-.withpadding {
-  padding: 0 0.15em;
-}
+  .withpadding {
+    padding: 0 0.15em;
+  }
 

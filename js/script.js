@@ -1,18 +1,13 @@
-/**
- * Created by yevheniia on 05.06.19.
- */
-
 function databind(mistakes) {
-
 
     mistakes.forEach(function(d) {
         return d.freq = + d.freq
     });
 
+    /*--- first container ---*/
     var TRUEmistakes = mistakes.filter(function (d){
         return d.mistake === "TRUE" && d.freq > 1 && d.categoryBig != "апостроф"
     });
-
 
     var nested_data = d3.nest()
         .key(function(d) { return d.category; })
@@ -20,19 +15,8 @@ function databind(mistakes) {
         .entries(TRUEmistakes);
 
 
-    //
-    // function myAbcSort(a, b){
-    //     if(a.values.length > b.values.length) {
-    //         return -1;
-    //     } else {
-    //         return 1;
-    //     }
-    // }
-    // nested_data.sort(myAbcSort);
-
-
-
     var container = d3.select("#MisprintButtons");
+
     var oneMisprint = container.selectAll("div")
         .data(nested_data)
         .enter()
@@ -75,7 +59,7 @@ function databind(mistakes) {
 
 
 
-    /*----------------------------------------*/
+    /*--- second container ---*/
     var ap_TRUEmistakes = mistakes.filter(function (d){
         return d.mistake === "TRUE" && d.categoryBig === "апостроф"
     });
@@ -126,9 +110,6 @@ function databind(mistakes) {
     ap_pCont.selectAll(".misprintCases").sort(function(a,b){
         return d3.descending(a.freq, b.freq)
     })
-
-
-
 }
 
 
@@ -141,7 +122,8 @@ function step_00() {
 step_00();
 
 
-    /* --- перший блок ---*/
+/*-- кнопочки гортання --*/
+// миша
     $("#next-btn")
         .on("mouseover", function() {
             var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
@@ -157,8 +139,6 @@ step_00();
             }, Math.abs(currentMargin));
         });
 
-
-
     $("#prev-btn")
         .on("mouseover", function() {
             $("#MisprintButtons").stop().animate({
@@ -171,6 +151,8 @@ step_00();
                 'margin-left' : currentMargin
             }, Math.abs(currentMargin));
         });
+
+
 
 
 
@@ -203,23 +185,23 @@ step_00();
         });
 
 
-    var keyup = true;
+
+
+
     /* по кнопках клавіатури */
+    var keyup = true;
     $(document).on("keydown", function(e) {
         switch (e.which) {
             case 37:
+                //якщо кнопка записнута, гортати швидко в кінець
                 if(keyup === false) {
-                    console.log("repeated");
-                    var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (8100 - Math.abs(currentMargin));
-
+                    let currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
                     $("#MisprintButtons").stop().animate({
                         'margin-left': 0
                     }, 0);
                 } else {
-                    console.log("once");
-                    var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (8100 - Math.abs(currentMargin));
+                    //якщо натиснули і відпустили
+                    let currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
                     if(currentMargin < 0){
                         $("#MisprintButtons").stop().animate({
                             'margin-left': +currentMargin + 270 + "px"
@@ -229,25 +211,23 @@ step_00();
                             'margin-left': - 8100 + (window.innerWidth * 0.9) + "px"
                         }, 0);
                     }
-
                 }
-
 
                 break;
 
             case 39:
                 if(keyup === false) {
                     console.log("repeated");
-                    var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (8100 - Math.abs(currentMargin));
+                    let currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
+                    let speed = (8100 - Math.abs(currentMargin));
 
                     $("#MisprintButtons").stop().animate({
                         'margin-left': - 8100 + (window.innerWidth * 0.9) + "px"
                     }, 0);
                 } else {
                     console.log("once");
-                    var currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
-                    var speed = (8100 - Math.abs(currentMargin));
+                    let currentMargin = $("#MisprintButtons").css("margin-left").replace("px", "");
+                    let speed = (8100 - Math.abs(currentMargin));
                     if (currentMargin > (-8100 + (window.innerWidth * 0.9))){
                         $("#MisprintButtons").stop().animate({
                             'margin-left': +currentMargin - 270 + "px"

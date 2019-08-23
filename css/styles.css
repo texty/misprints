@@ -304,7 +304,32 @@ body {
     .mob {
       display: block; } }
 
-/* ---------------------------- */
+/*  ---- header ----- */
+header {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 45% 40% auto;
+  margin-bottom: 100px; }
+  @media (max-width: 500px) and (orientation: portrait) {
+    header {
+      margin-bottom: 30px; } }
+  header img {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    opacity: 0.5; }
+    @media (max-width: 500px) and (orientation: portrait) {
+      header img {
+        opacity: 1; } }
+  header #title {
+    color: white;
+    margin: auto 100px auto auto;
+    font-size: 40pt;
+    z-index: 1000000;
+    grid-column: 2/3;
+    grid-row: 1/2; }
+
+/* ---------- main ------------------ */
 .sliderContainer {
   position: relative; }
 
@@ -314,27 +339,34 @@ body {
   overflow: hidden;
   position: relative; }
 
-#prev-btn, #next-btn {
+#prev-btn,
+#next-btn {
   position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   top: calc(50vh - 25px); }
 
-#prev-btn-ap, #next-btn-ap {
+#prev-btn-ap,
+#next-btn-ap {
   position: absolute;
   width: 40px;
   height: 50px;
   border-radius: 50%;
   top: calc(50% - 25px); }
 
-#prev-btn:hover, #next-btn:hover, #prev-btn-ap:hover, #next-btn-ap:hover {
+#prev-btn:hover,
+#next-btn:hover,
+#prev-btn-ap:hover,
+#next-btn-ap:hover {
   cursor: pointer; }
 
-#prev-btn, #prev-btn-ap {
+#prev-btn,
+#prev-btn-ap {
   left: 5px; }
 
-#next-btn, #next-btn-ap {
+#next-btn,
+#next-btn-ap {
   right: 5px; }
 
 .content.hideElem {
@@ -366,7 +398,7 @@ div.column-mob {
   grid-gap: 20px; }
 
 .textContent {
-  width: 50%;
+  width: 45%;
   margin: auto;
   font-size: 20px; }
   @media (max-width: 500px) {
