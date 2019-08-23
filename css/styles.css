@@ -330,6 +330,9 @@ header {
     grid-row: 1/2; }
 
 /* ---------- main ------------------ */
+h2 {
+  margin-top: 100px; }
+
 .sliderContainer {
   position: relative; }
 
