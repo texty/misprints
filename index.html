@@ -62,13 +62,13 @@
 <header>
     <!--<div id="cover-hover"></div>-->
     <img src="img/cover.png"/>
-    <h1 id="title" class="desk">Я б у бу<span class="strike" style="color:red; font-style:italic; font-family: 'Bad Script', cursive;">г</span> алтери пійшов...<br> найсмішніші помилки з декларацій
+    <h1 id="title" class="desk">Я б у бу<span class="strike" style="color:red; font-style:italic; font-family: 'Bad Script', cursive;margin-right: 5px">г</span>алтери пійшов...<br> найсмішніші помилки з декларацій
     </h1>
 </header>
 <main>
 
 <div class="textContent">
-    <h1 id="title" class="mob">Я б у бу<span class="strike" style="color:red; font-style:italic; font-family: 'Bad Script', cursive;">г</span> алтери пійшов...<br> Найсмішніші помилки з декларацій
+    <h1 id="title" class="mob">Я б у бу<span class="strike" style="color:red; font-style:italic; font-family: 'Bad Script', cursive; margin-right: 5px">г</span>алтери пійшов...<br> Найсмішніші помилки з декларацій
     </h1>
 
     <p>У червні на ТЕКСТАХ вийшла <a href="http://texty.org.ua/d/2019/salaries/" target="_blank">стаття</a> про зарплати в держсекторі на основі даних із понад мільйона декларацій. Виконання цього проекту мало одну особливість. Декларанти при зазначенні своїх професій наробили стільки помилок і хибодруків, що це суттєво ускладнило процес аналізу даних. Але, ніде правди діти, від цього він став дещо веселішим.
@@ -112,7 +112,10 @@
 
      <p>Якщо сумніваєтесь, одна чи дві “Н” — краще ставити три. Всі ж так робили в шкільних диктантах… Хай краще думають, що у вас залипла кнопка на клавіатурі.
 </p>
-    <p>Гортайте слайдер вліво-вправо за допомогою миші або стрілок на клавіатурі, щоб переглянути всі хибодруки. Ми виписали всі варіанти помилок та хибодруків, які траплялись більше одного разу.
+    <p class="desk">Гортайте слайдер вліво-вправо за допомогою миші або стрілок на клавіатурі, щоб переглянути всі хибодруки. Ми виписали всі варіанти помилок та хибодруків, які траплялись більше одного разу.
+    </p>
+
+    <p class="mob">Клікніть на слово, аби подивитись хибодруки з ним.
     </p>
 
     <p>Слово / частота</p>
@@ -231,11 +234,6 @@
 </main>
 
 
-<!--<p>Цікаво, що депутати місцевого самоврядування - чи не найбідніші люди, якщо брати до увагу офіційну зарплату за основним місцем роботи. Середня зарплата депутата дорівнює мінімальній по країні</p>-->
-
-
-
-
 <!-- Donate button -->
     <div id="button">
         <h3>TEXTY.ORG.UA незалежне видання без навʼязливої реклами і замовних матеріалів. Щоб працювати і далі нам потрібна ваша підтримка.</h3>
@@ -260,22 +258,6 @@
         <a target="_blank" href=""><img src="img/read-more-3.png" alt="Небезпечно для життя"></a>
     </div>
 </section>
-
-
- <!--Created by TEXTY-->
-<!--<section id="created_texty">-->
-    <!--<div>-->
-        <!--<a href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/.../" class="share-btn"><i class="fab fa-facebook-f"></a>-->
-        <!--<a href="https://twitter.com/intent/tweet?text=http://texty.org.ua/.../" class="share-btn"><i class="fab fa-twitter"></a>-->
-        <!--&lt;!&ndash;<h3>Створено Текстами</h3>&ndash;&gt;-->
-        <!--<h3>Created by TEXTY</h3>-->
-    <!--</div>-->
-    <!--<div>-->
-        <!--<a href="http://texty.org.ua/" target="_blank"><img src="img/logo.png" alt="texty.org.ua"></a>-->
-    <!--</div>-->
-<!--</section>-->
-
-
 
 <!-- Ordinary footer-->
 <section class="footer">
@@ -327,9 +309,6 @@
 <script src="lib/jquery-2.1.4.min.js"></script>
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-<!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
-<!--<script src="lib/scrollama.min.js"></script>-->
-<!--<script src="lib/swoopy-drag.js"></script>-->
 <script src="lib/share-behavior.js"></script>
 <script src="lib/shuffletext.jquery.min.js"></script>
 <script src="js/script.js"></script>
@@ -361,28 +340,6 @@
     $("#show-methodology").on("click", function() {
         $(".methodology").toggleClass("hidden", "visible")
     })
-
-
-
-
-//
-//    d3.csv("data/agrep_mistakes_result.csv", function(mistakes) {
-//      var interesting = mistakes.filter(function(d) {
-//            return d.interesting === "yes"
-//        });
-//
-//        var textArray = [];
-//
-//        interesting.forEach(function(d){
-//            textArray.push(d.case)
-//        });
-//        console.log(textArray);
-//        $('#text').ShuffleText(
-//            textArray
-//        , {loop: true, shuffleSpeed: 10});
-//
-//    });
-
 
 </script>
 
