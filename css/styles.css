@@ -321,22 +321,35 @@ header {
     @media (max-width: 800px) and (orientation: portrait) {
       header img {
         opacity: 1; } }
-  header #title {
-    width: 100%;
-    line-height: 1.5;
-    color: white;
-    margin: auto 100px auto auto;
+  header #titleContainer {
     z-index: 1000000;
     grid-column: 2/3;
-    grid-row: 1/2; }
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column; }
+  header #title, header #subtitle {
+    width: 100%;
+    line-height: 1.5;
+    color: white; }
 
-h1 {
+h1#title {
+  margin: auto 100px 0 auto;
   font-size: 40pt; }
-  @media (min-width: 801px) {
-    h1 {
-      font-size: 35pt; } }
   @media (max-width: 800px) {
-    h1 {
+    h1#title {
+      font-size: 28pt; } }
+  @media (max-width: 1200px) {
+    h1#title {
+      font-size: 35pt; } }
+
+h1#subtitle {
+  margin: 0 100px auto auto;
+  font-size: 30pt; }
+  @media (max-width: 800px) {
+    h1#subtitle {
+      font-size: 20pt; } }
+  @media (max-width: 1200px) {
+    h1#subtitle {
       font-size: 25pt; } }
 
 /* ---------- main ------------------ */
