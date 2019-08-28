@@ -188,7 +188,7 @@ step_00();
 
 
 
-    /* по кнопках клавіатури */
+    /* по кнопках клавіатури - перший контейнер*/
     var keyup = true;
     $(document).on("keydown", function(e) {
         switch (e.which) {
@@ -258,6 +258,74 @@ step_00();
 
 
 
+
+/* по кнопках клавіатури - другий контейнер */
+var keyup = true;
+$(document).on("keydown", function(e) {
+    switch (e.which) {
+        case 37:
+            //якщо кнопка записнута, гортати швидко в кінець
+            if(keyup === false) {
+                let currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
+                $("#ap_MisprintButtons").stop().animate({
+                    'margin-left': 0
+                }, 0);
+            } else {
+                //якщо натиснули і відпустили
+                let currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
+                if(currentMargin < 0){
+                    $("#ap_MisprintButtons").stop().animate({
+                        'margin-left': +currentMargin + 270 + "px"
+                    }, 250);
+                } else {
+                    $("#ap_MisprintButtons").stop().animate({
+                        'margin-left': - 1750 + (window.innerWidth * 0.9) + "px"
+                    }, 0);
+                }
+            }
+
+            break;
+
+        case 39:
+            if(keyup === false) {
+                console.log("repeated");
+                let currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
+                let speed = (1750 - Math.abs(currentMargin));
+
+                $("#ap_MisprintButtons").stop().animate({
+                    'margin-left': - 1750 + (window.innerWidth * 0.9) + "px"
+                }, 0);
+            } else {
+                console.log("once");
+                let currentMargin = $("#ap_MisprintButtons").css("margin-left").replace("px", "");
+                let speed = (8100 - Math.abs(currentMargin));
+                if (currentMargin > (-1750 + (window.innerWidth * 0.9))){
+                    $("#ap_MisprintButtons").stop().animate({
+                        'margin-left': +currentMargin - 270 + "px"
+                    }, 250);
+                } else {
+                    $("#ap_MisprintButtons").stop().animate({
+                        'margin-left': 0
+                    }, 250);
+                }
+
+            }
+
+
+
+            break;
+
+        default:
+            return; // exit this handler for other keys
+    }
+    keyup = false;
+    // e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+
+$(document).keyup(function(e) {
+    console.log("keyup");
+    keyup = true
+});
 
 
 
