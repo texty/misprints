@@ -308,7 +308,7 @@ body {
 header {
   background-color: black;
   display: grid;
-  grid-template-columns: 45% 40% auto;
+  grid-template-columns: 35% 50% auto;
   margin-bottom: 100px; }
   @media (max-width: 800px) and (orientation: portrait) {
     header {

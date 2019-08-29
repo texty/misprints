@@ -245,7 +245,7 @@
         <!--<h3>TEXTY.ORG.UA is an independent media without annoying advertisement and pre-paid materials. To keep working we need your support.</h3>-->
 
         <div id="button-container">
-            <button onclick="location.href='https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTc2NjUwNTYyODI3IiwiYW1vdW50IjoiNTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J%2FQvtC20LXRgNGC0LLQsCIsInR5cGUiOiJkb25hdGUiLCJsYW5ndWFnZSI6InVrIn0%3D&signature=YFkd4Z74QCJXRxMTPoWm0JVlkX4%3D'" id="support-us">ПОЖЕРТВУВАТИ</button>
+            <button onclick="location.href='https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTc2NjUwNTYyODI3IiwiYW1vdW50IjoiMTUwIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6ItCf0L7QttC10YDRgtCy0LAiLCJ0eXBlIjoiZG9uYXRlIiwibGFuZ3VhZ2UiOiJ1ayJ9&signature=tTFrEUyI4WV5l3N7G%2BYg5keUaXU%3D'" id="support-us">ПОЖЕРТВУВАТИ</button>
             <!--<button onclick="location.href='https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTc2NjUwNTYyODI3IiwiYW1vdW50IjoiNTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J%2FQvtC20LXRgNGC0LLQsCIsInR5cGUiOiJkb25hdGUiLCJsYW5ndWFnZSI6InVrIn0%3D&signature=YFkd4Z74QCJXRxMTPoWm0JVlkX4%3D'" id="support-us">DONATE</button>-->
 
         </div>
@@ -319,32 +319,15 @@
 <script src="js/script.js"></script>
 <script src="js/mobile.js"></script>
 
-<script>
-
-</script>
 
 <script>
-    //Зміна кольору social icons color change on scroll
-    var headerHeight = $("#header").css("height");
-    headerHeight = headerHeight.replace("px", '');
-    $(function() {
-        var getWindow = jQuery(window);
-        var windowHeight = getWindow.height();
-        $(window).scroll(function(){
-            if($(window).scrollTop() > headerHeight ){
-                $(".fab.fa-facebook-square").css("color", "#d84556");
-                $(".fab.fa-twitter-square").css("color", "#d84556");
-            } else {
-                $(".fab.fa-facebook-square").css("color", "white");
-                $(".fab.fa-twitter-square").css("color", "white");
-            }
-        });
-    });
 
-//    show metodology
-    $("#show-methodology").on("click", function() {
-        $(".methodology").toggleClass("hidden", "visible")
-    })
+    var titleArray = ["Країні потрібні <span style='color:red'>вахівці</span>", "Я у бухгалтери пішов, а в п'ятницю <span style='color:red'>бухалтер...</span>", "<span style='color:red'>Депутут</span> тут, <span style='color:red'>депутам</span> там", "Інспектор <span style='color:red'>ВОР</span> уоазор"];
+    var rand = titleArray[Math.floor(Math.random() * titleArray.length)];
+
+    $("#title").html(rand)
+
+
 
 </script>
 
