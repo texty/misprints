@@ -64,7 +64,7 @@
     <img src="img/cover.png"/>
     <div id="titleContainer" class="desk">
         <h1 id="titleDesk" class="desk"></h1>
-        <h1 id="subtitle" class="desk">Найсмішніші помилки та абревіатури з декларацій чиновників</h1>
+        <h1 id="subtitle" class="desk"></h1>
     </div>
 
 </header>
@@ -73,7 +73,7 @@
 <div class="textContent">
     <div id="titleContainer" class="mob">
         <h1 id="titleMob" style="width:100%;"></h1>
-        <h1 id="subtitle" style="width:100%;">Найсмішніші помилки та абревіатури з декларацій чиновників</h1>
+        <h1 id="subtitle" style="width:100%;"></h1>
     </div>
 
     <p>У червні на ТЕКСТАХ вийшла <a href="http://texty.org.ua/d/2019/salaries/" target="_blank">стаття</a> про зарплати в держсекторі на основі даних із понад мільйона декларацій. Виконання цього проекту мало одну особливість. Декларанти при зазначенні своїх професій наробили стільки помилок і хибодруків, що це суттєво ускладнило процес аналізу даних. Але, ніде правди діти, від цього він став дещо веселішим.
@@ -329,9 +329,12 @@
 
     $("#titleDesk").html(rand);
     $("#titleMob").html(rand);
+    $("#subtitle").text(" Найсмішніші помилки та абревіатури з декларацій чиновників");
+
 
     var newMeta = tagsArray[randomMumber];
     $("title").text(newMeta);
+
 
 
 //    міняємо сторінку для шеру, в залежності від назви
