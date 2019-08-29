@@ -323,7 +323,7 @@
 <script>
 
     var titleArray = ["Країні потрібні <span style='color:red'>вахівці</span>", "Я у бухгалтери пішов, а в пʼятницю <span style='color:red'>бухалтер...</span>", "<span style='color:red'>Депутут</span> тут, <span style='color:red'>депутам</span> там", "«Інспектор <span style='color:red'>ВОР</span> уоазор»"];
-    var tagsArray = ["Країні потрібні вахівці", "Я у бухгалтери пішов, а в пʼятницю бухалтер...", "Депутут тут, депутам там", "«Інспектор ВОР уоазор»"];
+    var tagsArray = ["Країні потрібні вахівці", "Я у бухгалтери пішов, а в пʼятницю бухалтер...", "Депутут тут, депутам там", "Інспектор ВОР уоазор"];
 
     var randomMumber = Math.floor(Math.random() * titleArray.length);
     var rand = titleArray[randomMumber];
@@ -331,30 +331,44 @@
     $("#titleDesk").html(rand);
     $("#titleMob").html(rand);
 
-
     var newMeta = tagsArray[randomMumber];
-    console.log(rand);
-    console.log(newMeta);
 
 
-    $('meta[property="og:site_name"]').remove();
-    $('head').append( '<meta property="og:site_name" content="'+ newMeta + '"' + ">'" );
-
-    $('meta[property="og:title"]').remove();
-    $('head').append( '<meta property="og:title" content="'+ newMeta + '"' + ">'" );
-
-    $('meta[name=title]').remove();
-    $('head').append( '<meta name="title" content="'+ newMeta + '"' + ">'" );
-
-    $('title').remove();
-    $('head').append( '<title>' + newMeta + '</title>');
+//    міняємо сторінку для шеру, в залежності від назви
 
 
-
-//    $('meta[name=title]').attr('content', newMeta);
-
-
-
+    if(newMeta === "Країні потрібні вахівці") {
+        $("#facebook")
+                .find("a.share-btn")
+                .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/01.html");
+        $("#twitter")
+                .find("a.share-btn")
+                .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/01.html");
+        }
+    if(newMeta === "Я у бухгалтери пішов, а в пʼятницю бухалтер...") {
+        $("#facebook")
+                .find("a.share-btn")
+                .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/02.html");
+        $("#twitter")
+                .find("a.share-btn")
+                .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/02.html");
+        }
+    if(newMeta === "Депутут тут, депутам там") {
+        $("#facebook")
+                .find("a.share-btn")
+                .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/03.html");
+        $("#twitter")
+                .find("a.share-btn")
+                .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/03.html");
+    }
+    if(newMeta === "Інспектор ВОР уоазор") {
+        $("#facebook")
+                .find("a.share-btn")
+                .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/04.html");
+        $("#twitter")
+                .find("a.share-btn")
+                .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/04.html");
+    }
 
 </script>
 
