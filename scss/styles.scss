@@ -63,7 +63,8 @@ header {
     flex-direction: column;
   }
 
-  h1#titleDesk, h1#titleMob, h1#subtitle {
+  h1#titleDesk, h1#titleMob, h1.subtitle {
+    font-weight: 800;
     width:100%;
     line-height: 1.5;
     color:white;
@@ -84,7 +85,7 @@ h1#titleDesk, h1#titleMob {
 
 
 
-  h1#subtitle {
+  h1.subtitle {
     margin: 0 100px auto auto;
     font-size:30pt;
     @media(max-width:800px){

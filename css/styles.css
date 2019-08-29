@@ -330,7 +330,8 @@ header {
     grid-row: 1/2;
     display: flex;
     flex-direction: column; }
-  header h1#titleDesk, header h1#titleMob, header h1#subtitle {
+  header h1#titleDesk, header h1#titleMob, header h1.subtitle {
+    font-weight: 800;
     width: 100%;
     line-height: 1.5;
     color: white; }
@@ -345,14 +346,14 @@ h1#titleDesk, h1#titleMob {
     h1#titleDesk, h1#titleMob {
       font-size: 35pt; } }
 
-h1#subtitle {
+h1.subtitle {
   margin: 0 100px auto auto;
   font-size: 30pt; }
   @media (max-width: 800px) {
-    h1#subtitle {
+    h1.subtitle {
       font-size: 20pt; } }
   @media (max-width: 1200px) {
-    h1#subtitle {
+    h1.subtitle {
       font-size: 25pt; } }
 
 /* ---------- main ------------------ */
