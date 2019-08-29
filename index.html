@@ -226,8 +226,8 @@
 
     <div id="soc">
         <!--<div id="translate"><a href="http://texty.org.ua/d/2019/numbers/en"> <span>English</span> </a></div>-->
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/" target="_blank" class="share-btn"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/" target="_blank" class="share-btn"><i class="fab fa-twitter-square"></i></a>
+        <a id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/" target="_blank" class="share-btn"><i class="fab fa-facebook-square"></i></a>
+        <a id="twitter" href="https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/" target="_blank" class="share-btn"><i class="fab fa-twitter-square"></i></a>
     </div>
 </div>
 
@@ -338,35 +338,27 @@
 
 
     if(newMeta === "Країні потрібні вахівці") {
-        $("#facebook")
-                .find("a.share-btn")
+        $("a#facebook")
                 .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/01.html");
-        $("#twitter")
-                .find("a.share-btn")
+        $("a#twitter")
                 .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/01.html");
         }
     if(newMeta === "Я у бухгалтери пішов, а в пʼятницю бухалтер...") {
-        $("#facebook")
-                .find("a.share-btn")
+        $("a#facebook")
                 .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/02.html");
-        $("#twitter")
-                .find("a.share-btn")
+        $("a#twitter")
                 .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/02.html");
         }
     if(newMeta === "Депутут тут, депутам там") {
-        $("#facebook")
-                .find("a.share-btn")
+        $("a#facebook")
                 .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/03.html");
-        $("#twitter")
-                .find("a.share-btn")
+        $("a#twitter")
                 .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/03.html");
     }
     if(newMeta === "Інспектор ВОР уоазор") {
-        $("#facebook")
-                .find("a.share-btn")
+        $("a#facebook")
                 .attr("href", "https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2019/misprints/share/04.html");
-        $("#twitter")
-                .find("a.share-btn")
+        $("a#twitter")
                 .attr("href", "https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2019/misprints/share/04.html");
     }
 
