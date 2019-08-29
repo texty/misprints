@@ -330,7 +330,7 @@ header {
     grid-row: 1/2;
     display: flex;
     flex-direction: column; }
-  header #titleDesk, header #titleMob, header #subtitle {
+  header h1#titleDesk, header h1#titleMob, header h1#subtitle {
     width: 100%;
     line-height: 1.5;
     color: white; }
