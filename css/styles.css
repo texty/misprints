@@ -308,11 +308,14 @@ body {
 header {
   background-color: black;
   display: grid;
-  grid-template-columns: 35% 50% auto;
+  grid-template-columns: 43% 40% auto;
   margin-bottom: 100px; }
   @media (max-width: 800px) and (orientation: portrait) {
     header {
       margin-bottom: 30px; } }
+  @media (max-width: 1200px) {
+    header {
+      grid-template-columns: 35% 50% auto; } }
   header img {
     width: 100%;
     grid-column: 1/-1;
@@ -327,19 +330,19 @@ header {
     grid-row: 1/2;
     display: flex;
     flex-direction: column; }
-  header #title, header #subtitle {
+  header #titleDesk, header #titleMob, header #subtitle {
     width: 100%;
     line-height: 1.5;
     color: white; }
 
-h1#title {
+h1#titleDesk, h1#titleMob {
   margin: auto 100px 0 auto;
   font-size: 40pt; }
   @media (max-width: 800px) {
-    h1#title {
+    h1#titleDesk, h1#titleMob {
       font-size: 28pt; } }
   @media (max-width: 1200px) {
-    h1#title {
+    h1#titleDesk, h1#titleMob {
       font-size: 35pt; } }
 
 h1#subtitle {
